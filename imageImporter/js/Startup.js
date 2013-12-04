@@ -6,6 +6,8 @@ startup=function(){
     var fileNameText = document.createTextNode('...');
     nodeFileName.appendChild(fileNameText);
 
+    var tilePalette = document.getElementById('tile-palette');
+    //var addTileButton = document.getElementById('add-tile');
     
     var imageImporter = new ImageImporter(canvas, ctx);
 
@@ -77,9 +79,14 @@ startup=function(){
         evt.dataTransfer.dropEffect = 'copy';
     };
 
+    /*function selectFile(evt) {
+        document.getElementById('files').click();
+    };*/
+    
     document.getElementById('files').addEventListener('change', handleFileSelect, false);
     canvas.addEventListener('dragover', handleDragOver, false);
     canvas.addEventListener('drop', handleFileSelectDnD, false);
+    //addTileButton.addEventListener('click', selectFile);
 
 };
 

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Importer</title>
+    <!-- Cargamos el archivo Javascript del juego -->
+    <script src="js/ImageImporter.js"></script>
+    <script src="js/Startup.js"></script>
+    <script>
+        window.onload=startup;
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/startup.css">
+    <link rel="stylesheet" href="css/gdk.css">
+
+</head>
+<body>
+    <div class="custom-input-file"><input type="file" id="files" name="files[]" class="input-file"/>
+    Load Image
+        <div class="file" id="fileName"></div>
+    </div>    
+    <br>
+    <canvas id="canvas" width="500" height="400" style="border:1px solid #000;">
+        <p>Explorer not compatible</p>
+    </canvas>
+    <section id="tile-palette" class="panel right-panel">
+        <header>
+            <h2>Tile palette</h2>
+            <button class="pin" title="Pin panel"></button>
+        </header>
+        <nav>
+            <button title="Add tiles" class="add-tile">+</button>
+            <input type="file" hidden />
+        </nav>
+        <ol class="tile-list">
+        </ol>
+    </section>
+</body>
+</html>
+
